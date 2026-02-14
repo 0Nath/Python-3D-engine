@@ -4,6 +4,12 @@ A python simple 3D object rendering made "from stratch"
 ## Utilisation
 ### 3D engine
 the program can be controled using the mouse and ZQSD SPACE and SHIFT.
+A console is aviable in the terminal. for now the only supported command is:
+```
+tp x y z
+```
+where x y and z are ints.
+
 
 The simulation class takes multiple arguments, which are:
 Dimensions: A tuple of int
