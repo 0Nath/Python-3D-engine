@@ -35,11 +35,15 @@ Stl loader classes:
 ###Examples of utilisation:
 Load a stl file
 ```
-	meshs = [stl_loader.Mesh_from_stl("name.stl",(255,255,255))
-			 ]
-	Simulation((1920,1080),meshs)
+meshs = [stl_loader.Mesh_from_stl("name.stl",(255,255,255))
+		 ]
+Simulation((1920,1080),meshs)
 
 ```
+![The triple T](images/example2.jpg)
+
+
+
 Use simples shapes:
 ```
   meshs = [
@@ -52,3 +56,4 @@ Use simples shapes:
   	Simulation((1920,1080),meshs)
 
 ```
+![Simple shapes](images/example1.jpg)
