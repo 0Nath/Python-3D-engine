@@ -1,39 +1,52 @@
 # Python-3D-engine
 A python simple 3D object rendering made "from stratch"
 
-## Utilisation
-### 3D engine
-the program can be controled using the mouse and ZQSD SPACE and SHIFT.
-A console is aviable in the terminal. for now the only supported command is:
+## Usage
+
+### 3D Engine
+The program can be controlled using the mouse and the ZQSD, SPACE, and SHIFT keys.  
+A console is available in the terminal. For now, the only supported command is
 ```
 tp x y z
 ```
 where x y and z are ints.
 
 
-The simulation class takes multiple arguments, which are:
-Dimensions: A tuple of int
-meshs: The meshs to load (See below for more)
-Launcher (Optionnal): A Class. Use it if you need to add the launcher in another pygame project. The Simulation will call the following attributs:
+The Simulation class takes several arguments:
+
+- dimensions: a tuple of integers  
+- meshs: the meshes to load (see below for more)  
+- launcher (optional): a class used if you want to integrate the launcher into another Pygame project.  
+
+The Simulation will call the following attributes:
 ```
 Launcher.screen
 Launcher.dimensions
 Launcher.font
 Launcher.font_color
 ```
-Meaning that the pygame project need to have a self.r.screen refering to the pygame surface, a self.dimensions refering to the dimentions (tubple of two int), a self.font refering to the font (pygame.font. ...) and a self.font_color (tuple of 3 int).
+Meaning your Pygame project must have:
+- self.screen: the Pygame surface  
+- self.dimensions: a tuple of two integers  
+- self.font: a Pygame font (pygame.font.Font(...))  
+- self.font_color: a tuple of three integers (RGB)  
 
-### Aditionnal classes
-Inclued Mesh class:
-  take points (see below in examples) and a color
-included Rotating_Mesh:
-  take points (see below in examples), a color and 3 rotation (x,y,z) 
+---
 
-Stl loader classes:
-  a Mesh_from_stl class, taking a file path and a color
+### Additional Classes
 
-###Examples of utilisation:
-Load a stl file
+Included Mesh class:  
+Takes a list of points (see examples below) and a color.
+
+Included Rotating_Mesh class:  
+Takes a list of points (see examples below), a color, and three rotation values (x, y, z).
+
+STL Loader classes:  
+Includes a Mesh_from_stl class that takes a file path and a color.
+
+---
+
+### Examples of Use
 ```
 meshs = [stl_loader.Mesh_from_stl("name.stl",(255,255,255))
 		 ]
@@ -41,7 +54,7 @@ Simulation((1920,1080),meshs)
 
 ```
 ![The triple T](images/example2.jpg)
-
+A loaded model.
 
 
 Use simples shapes:
